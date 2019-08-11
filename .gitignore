@@ -1,0 +1,38 @@
+*~
+*.pyc
+*.swp
+*.swo
+gae_runtime/*
+# We have added .git over here such that "git check-ignore" command should
+# ignore the files and dirs inside the .git dir.
+.git/*
+third_party/*
+assets/hashes.js
+backend_prod_files/*
+local_compiled_js/*
+core/templates/prod/*
+core/templates/dev/head/dist/*
+core/tests/.browserstack.env
+node_modules/*
+.coverage*
+!.coveragerc
+coverage.xml
+.viminfo
+.vscode/*
+libpeerconnection.log
+tsc_output_log.txt
+uploads/*
+venv/
+*.db
+.DS_Store
+.idea
+.vagrant/*
+.lock
+
+# Oppia uses cache slugs for various resources and we need separate resource
+# directories for dev and prod. Resource directories for prod are generated
+# via build.py and should not be committed to the repo.
+build/*
+
+# app.yaml is generated dynamically so needs to be ignored
+app.yaml
